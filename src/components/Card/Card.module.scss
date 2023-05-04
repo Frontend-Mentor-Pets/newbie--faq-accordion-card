@@ -1,10 +1,55 @@
 @import '../../styles/colors.scss';
 
 .card {
+  width: 920px;
+  height: 509px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 8px;
   background-color: $light-grayish-blue;
+  margin-top: 129px;
+  margin-left: 42px;
+  border-radius: 23px;
+}
+
+.img {
+  position: relative;
+  width: 484px;
+  height: 100%;
+  background-image: url('../../assets/images/bg-pattern-desktop.svg');
+  background-position: -577px -295px;
+  background-repeat: no-repeat;
+}
+
+.header {
+  font-family: 'kumbh_sans_bold';
+  font-size: 31px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.woman {
+  position: absolute;
+  top: 70px;
+  left: -84px;
+  z-index: 20;
+}
+
+.box {
+  position: absolute;
+  top: 204px;
+  left: -93px;
+  z-index: 30;
+}
+
+.content {
+  width: 50%;
+}
+
+.questions {
+  width: 350px;
+  list-style: none;
 }
