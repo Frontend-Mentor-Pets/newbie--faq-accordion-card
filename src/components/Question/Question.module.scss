@@ -1,0 +1,60 @@
+@import '../../styles/colors.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: $very-dark-grayish-blue;
+
+  &:hover {
+    cursor: pointer;
+    color: $soft-red;
+  }
+}
+
+.question {
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  color: inherit;
+}
+
+.arrow {
+  width: 10px;
+  height: 7px;
+  margin-right: 16px;
+  transform: scaleY(1);
+  transition: transform 0.7s;
+}
+
+.answer {
+  height: 5px;
+  line-height: 18px;
+  color: $dark-grayish-blue;
+  overflow: hidden;
+  transition: height 0.7s;
+  border-bottom: 1px solid $dark-grayish-blue;
+  margin-top: 12px;
+  margin-bottom: 17px;
+}
+
+input[type='radio']:checked ~ .label .question {
+  font-family: 'kumbh_sans_bold';
+}
+
+input[type='radio']:checked ~ .label .arrow {
+  transform: scaleY(-1);
+  transition: transform 0.7s;
+}
+
+input[type='radio']:checked ~ .answer {
+  height: 55px;
+  transition: height 0.7s;
+}
