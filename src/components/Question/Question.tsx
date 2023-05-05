@@ -13,7 +13,7 @@ const Question: FC<QuestionProps> = ({ id, question, answer }) => {
     <li className={styles.wrapper}>
       <input type='radio' name='arrow' id={id} defaultChecked={id === '1'} />
       <label htmlFor={id} className={styles.label}>
-        <p className={styles.question}>{question}</p>
+        <span className={styles.question}>{question}</span>
         <img className={styles.arrow} src={arrow} alt='arrow' />
       </label>
       <p className={styles.answer}>{answer}</p>
